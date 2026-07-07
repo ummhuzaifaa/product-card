@@ -1,8 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
  font-size: 13px;
-  color:#515076 ;
-}
+  color:#515076;
+  background:url(images/image.png);
+
+ }
 .title {
   font-size: 70px;
   font-weight: 400;
@@ -13,43 +15,64 @@ body {
 }
   .card{
     width: 340px;
-    background-color: #F7F7FA;
-    margin: 45px;
+    max-width: 100%;
+    background-color:#F7F7FA ;
+    margin: 45px 0 0 0;
     padding: 25px;
      box-sizing: border-box;
  }
     .container{
-     
     margin: 0 auto; }
+    
   
-    .product-list{
+   .product-list{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+     max-width: 1068px;
     margin:0 auto;
     padding: 0;
- }
+    gap: 24px;}
+ 
   .card-image {
      width: 100%;
     height: 245px;
+    object-fit: cover;
  }
  .skin-type {
     display: block;}
 
-  .buy-button:hover{
+  .buy-button{
     background-color:#515076;
     color:white;
     padding: 13px 24px;
+    width: 100%;
+    max-width: 250px;
     font-size: 13px;
     font-weight:bold;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    transition: 0.3 ease;
-    transform: scale(0.98);
+    display: block;
+    margin: 0 auto;
+    transition:  0.3s ease;
+   box-sizing: border-box;
   }
+
+  .buy-button:hover {
+  transform: scale(1.05);}
+
+
+.price-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 20px;}
+
+  
  
   
   
