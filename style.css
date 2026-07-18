@@ -100,7 +100,7 @@ body {
   }
 
 
-.card__price-row {
+.card__prices {
   display: flex;
   justify-content: space-between;
   align-items: center;
