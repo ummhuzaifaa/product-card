@@ -100,7 +100,7 @@ body {
   }
 
 
-.card__prices {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,4 +139,16 @@ body {
 
   .card__button:hover {
   transform: scale(1.05);
+  }
+
+.color-btn {
+  background-color:#FFC0CB;
+  color: #515076(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;}
+
+
+.color-btn--active {
+  background-color: #d281f0;
   }
