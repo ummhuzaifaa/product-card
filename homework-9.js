@@ -1,10 +1,10 @@
-//6 
+//6 Сделайте константу экспортируемой, добавив перед «const» ключевое слово «экспорт».
 import { postComments } from './comment.js';
 
 
 console.log(postComments);
 
-//7
+//7 Вывести в массив массива тех комментариев, почта пользователей которых содержит ".com"
 const filteredComments =  postComments.filter(comment => comment.email.includes('.com'));
 
 console.log(filteredComments);
@@ -12,14 +12,14 @@ console.log(filteredComments);
 
 
 
-//Создать массив чисел от 1 до 10. Отфильтровать его таким образом, чтобы мы получили массив чисел, начиная с 5.
+//2 Создать массив чисел от 1 до 10. Отфильтровать его таким образом, чтобы мы получили массив чисел, начиная с 5.
 const numbers =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
 
 const filteredNumbers = numbers.filter(num => num >= 5);
 
 console.log(filteredNumbers);
 
-//Создать массив строк и проверить есть в массиве какая то сущность.
+//3 Создать массив строк и проверить есть в массиве какая то сущность.
 const furniture = ['Шкаф', 'Диван', 'Кровать', 'Стол', 'Стул', 'Кресло'];
 
 const itemToFind = 'Диван';
@@ -30,7 +30,7 @@ if (furniture.includes(itemToFind)) {
     console.log(`Нет, объекта "${itemToFind}" в массиве не нашлось.`);
 }
 
-//Функция, которая аргументом будет принимать массив и изменять его порядок на противоположной
+//4 Функция, которая аргументом будет принимать массив и изменять его порядок на противоположной
 function reverseArray(arr) {
     return arr.reverse();
 }
