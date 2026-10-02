@@ -13,7 +13,7 @@ function createProductCardTemplate(product) {
     cardClone.querySelector('.card__title').textContent = product.title;
     cardClone.querySelector('.card__description').textContent = product.description;
 
-    const ingredientsList = cardClone.querySelector('.card__ingredients__list');
+    const ingredientsList = cardClone.querySelector('.card__ingredients-list');
     product.ingredients.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
@@ -33,13 +33,16 @@ console.log("Результат работы .reduce():", productDescriptionsMap
 //5 Задание Реализовать функцию, которая при старте страницы выводит сообщение
 
 function getCountOfCards() {
-    while (true) {
-        const input = prompt("Сколько карточек отобразить? От 1 до 5");
-        if (input === null) return 0; 
-        const count = parseInt(input.trim(), 10);
-        if (!isNaN(count) && count >= 1 && count <= 5) return count;
-        alert("Ошибка ввода! Пожалуйста, введите корректное число от 1 до 5.");
-    }
+  while (true) {
+    const input = prompt("Сколько карточек отобразить? От 1 до 5");
+    if (input === null) return 0;
+    
+    const count = Number(input.trim());
+    
+    if (Number.isInteger(count) && count >= 1 && count <= 5) return count;
+    
+    alert("Ошибка ввода! Пожалуйста, введите корректное число от 1 до 5.");
+  }
 }
 
 function renderProducts(productsArray) {
@@ -47,7 +50,7 @@ function renderProducts(productsArray) {
     if (!container) return;
 
       container.querySelectorAll('.catalog__item').forEach(item => item.remove());
-
+zzz
         productsArray.forEach(product => {
         const cardElement = createProductCardTemplate(product);
         container.appendChild(cardElement);
