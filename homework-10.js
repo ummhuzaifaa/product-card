@@ -50,7 +50,7 @@ function renderProducts(productsArray) {
     if (!container) return;
 
       container.querySelectorAll('.catalog__item').forEach(item => item.remove());
-zzz
+      
         productsArray.forEach(product => {
         const cardElement = createProductCardTemplate(product);
         container.appendChild(cardElement);
