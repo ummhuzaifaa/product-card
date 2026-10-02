@@ -1,5 +1,6 @@
 import { products } from './products.js';
 
+// Задание 3. Шаблон через тег <template>
 function createProductCardTemplate(product) {
 
      const template = document.getElementById('card-template');
@@ -22,13 +23,14 @@ function createProductCardTemplate(product) {
      return cardClone;
 }
 
+// Задание 4. Метод .reduce() (остается без изменений)
 const productDescriptionsMap = products.reduce((acc, product) => {
     acc[product.title] = product.description;
     return acc;
 }, {});
 console.log("Результат работы .reduce():", productDescriptionsMap);
 
-//5
+//5 Задание Реализовать функцию, которая при старте страницы выводит сообщение
 
 function getCountOfCards() {
     while (true) {
@@ -48,7 +50,7 @@ function renderProducts(productsArray) {
 
         productsArray.forEach(product => {
         const cardElement = createProductCardTemplate(product);
-        container.appendChild(cardElement); // Используем appendChild вместо innerHTML
+        container.appendChild(cardElement);
     });
 }
 
